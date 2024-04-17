@@ -8,6 +8,9 @@ const TopPicks = () => {
     {src: require('../../../assets/images/girl1.jpg'), key: '1'},
     {src: require('../../../assets/images/girl.jpg'), key: '2'},
     {src: require('../../../assets/images/girl2.jpg'), key: '3'},
+    {src: require('../../../assets/images/girl.jpg'), key: '4'},
+    {src: require('../../../assets/images/girl1.jpg'), key: '5'},
+    {src: require('../../../assets/images/girl2.jpg'), key: '6'},
   ];
 
   const icons = [
@@ -89,5 +92,3 @@ const TopPicks = () => {
 };
 
 export default TopPicks;
-
-

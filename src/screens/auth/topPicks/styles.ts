@@ -2,7 +2,7 @@ import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   mainView: {
-    flex: 1,
+   flex: 1,
   },
   textTop: {
     fontSize: 25,
@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
   reviewBox: {
     flexDirection: 'row',
     marginLeft: 20,
-    marginTop: 15,
+    marginTop: 20,
   },
   profileView: {
     flex: 1,
@@ -100,15 +100,15 @@ const styles = StyleSheet.create({
   bottomBarInnerView: {
     height: 60,
     width: 380,
-    marginTop: 25,
-    backgroundColor: '#FF8F3D',
+    marginTop: 45,
+    backgroundColor: '#EE6940',
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 30,
   },
   bottomIcons: {
-    height: 30,
-    width: 30,
+    height: 35,
+    width: 35,
     marginHorizontal: 25,
   },
 });
