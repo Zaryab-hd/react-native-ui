@@ -14,9 +14,13 @@ const dress2Icon = require('./dress2.png');
 const dress3Icon = require('./dress3.png');
 const dress4Icon = require('./dress4.png');
 const signalIcon = require('./signal.png');
+const signalIcon1 = require('./signal1.png');
 const walletIcon = require('./wallet.png');
+const walletIcon1 = require('./wallet1.png');
 const chatIcon = require('./chat.png');
+const chatIcon1 = require('./chat1.png');
 const shoppingIcon = require('./shopping.png');
+const shoppingIcon1 = require('./shopping1.png');
 
 export {
   appleIcon,
@@ -35,7 +39,11 @@ export {
   dress3Icon,
   dress4Icon,
   signalIcon,
+  signalIcon1,
   walletIcon,
+  walletIcon1,
   chatIcon,
+  chatIcon1,
   shoppingIcon,
+  shoppingIcon1,
 };

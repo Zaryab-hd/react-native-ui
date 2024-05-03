@@ -1,9 +1,16 @@
-import {FlatList, Image, StyleSheet, Text, View} from 'react-native';
-import React from 'react';
-import {boyIcon, favoriteIcon, starIcon} from '../../../assets/icons';
+import React, {useState} from 'react';
+import {FlatList, Image, Text, View, TouchableOpacity} from 'react-native';
+import {boyIcon, favoriteIcon} from '../../../assets/icons';
 import styles from './styles';
 
 const TopPicks = () => {
+  const bottomBarIcons = [
+    {src: require('../../../assets/icons/signal.png'),selectedSrc:require('../../../assets/icons/signal1.png')},
+    {src: require('../../../assets/icons/wallet.png'),selectedSrc: require('../../../assets/icons/wallet1.png')},
+    {src: require('../../../assets/icons/chat.png'),selectedSrc:require('../../../assets/icons/chat1.png')},
+    {src: require('../../../assets/icons/shopping.png'),selectedSrc:require('../../../assets/icons/shopping1.png')},
+  ];
+
   const images = [
     {src: require('../../../assets/images/girl1.jpg'), key: '1'},
     {src: require('../../../assets/images/girl.jpg'), key: '2'},
@@ -20,12 +27,12 @@ const TopPicks = () => {
     {src: require('../../../assets/icons/dress4.png'), key: '4', name: 'Cross'},
   ];
 
-  const bottomBarIcons = [
-    {src: require('../../../assets/icons/signal.png'), key: '1'},
-    {src: require('../../../assets/icons/wallet.png'), key: '2'},
-    {src: require('../../../assets/icons/chat.png'), key: '3'},
-    {src: require('../../../assets/icons/shopping.png'), key: '4'},
-  ];
+
+    const [currentIndex, setCurrentIndex]=useState(0);
+    const handleIconClick = (index: any) => {
+      setCurrentIndex(index);
+    };
+  
 
   return (
     <View style={styles.mainView}>
@@ -57,9 +64,7 @@ const TopPicks = () => {
       </View>
       <Text style={styles.textDress}>Customer Reviews</Text>
       <View style={styles.reviewBox}>
-        <View style={styles.profileView}>
-          <Image style={styles.profile} source={boyIcon}></Image>
-        </View>
+        <Image style={styles.profile} source={boyIcon}></Image>
         <View style={styles.textView}>
           <Text style={styles.textReview}>
             Love the dress. Good quality and vendor supports.
@@ -71,21 +76,13 @@ const TopPicks = () => {
         </View>
       </View>
       <View style={styles.bottomBarView}>
-        <View style={styles.bottomBarInnerView}>
-          <FlatList
-            contentContainerStyle={{
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}
-            horizontal={true}
-            data={bottomBarIcons}
-            renderItem={({item}) => (
-              <View>
-                <Image style={styles.bottomIcons} source={item.src}></Image>
-              </View>
-            )}
-          />
-        </View>
+        {bottomBarIcons.map((icon, index) => (
+          <TouchableOpacity
+            key={index}
+            onPress={() => handleIconClick(index)}>
+            <Image style={styles.bottomIcons} source={currentIndex == index ? icon.selectedSrc :icon.src} />
+          </TouchableOpacity>
+        ))}
       </View>
     </View>
   );

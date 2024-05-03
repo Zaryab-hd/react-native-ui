@@ -2,7 +2,7 @@ import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   mainView: {
-   flex: 1,
+    flex: 1,
   },
   textTop: {
     fontSize: 25,
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
   },
   imageStyle: {
     height: 160,
-    width: 125,
+    width: 150,
     borderRadius: 15,
     marginHorizontal: 3,
   },
@@ -63,24 +63,21 @@ const styles = StyleSheet.create({
     marginLeft: 20,
     marginTop: 20,
   },
-  profileView: {
-    flex: 1,
-  },
   profile: {
     width: 45,
     height: 45,
   },
   textView: {
-    flex: 4,
+    flex: 1,
   },
   textReview: {
     fontSize: 16,
     color: 'black',
+    marginLeft: 15,
     flexWrap: 'wrap',
   },
   ratingsView: {
     flexDirection: 'column',
-    flex: 1,
     alignItems: 'flex-end',
     marginRight: 20,
   },
@@ -93,23 +90,21 @@ const styles = StyleSheet.create({
     fontSize: 14,
   },
   bottomBarView: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  bottomBarInnerView: {
-    height: 60,
-    width: 380,
-    marginTop: 45,
+    flexDirection: 'row',
     backgroundColor: '#EE6940',
-    alignItems: 'center',
-    justifyContent: 'center',
     borderRadius: 30,
+    paddingTop: 10,
+    paddingBottom: 10,
+    marginHorizontal: 5,
+    marginTop: 35,
+  },
+  bottomIconsView: {
+    flex: 1,
   },
   bottomIcons: {
     height: 35,
     width: 35,
-    marginHorizontal: 25,
+    marginHorizontal: 30,
   },
 });
 
