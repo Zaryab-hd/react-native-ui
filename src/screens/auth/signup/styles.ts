@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
       marginTop: 80,
     },
     input: {
-      height: 50,
+      height: 60,
       borderRadius: 15,
       borderWidth: 2,
       borderColor: '#0270ba',

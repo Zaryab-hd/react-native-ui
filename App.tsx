@@ -10,7 +10,7 @@ import CustomList from './src/screens/lists/custom_list';
 import GridList from './src/screens/lists/grid_list';
 
 function App(): React.JSX.Element {
-  return <TopPicks />;
+  return <Signup />;
 }
 
 export default App;
